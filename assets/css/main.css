@@ -1005,6 +1005,11 @@ a {
   }
 }
 
+.hero > img {
+  height: 25vh;
+  width: 100%;
+}
+
 /* Inputs */
 .input {
   border: 1px inset #FFFFFF;
@@ -1022,7 +1027,7 @@ a {
   padding-left: 3rem;
   padding-right: 3rem;
   color: #FFFFFF;
-  position: relative;
+  position: sticky;
 }
 .navbar__brand > svg {
   max-height: 7vh;

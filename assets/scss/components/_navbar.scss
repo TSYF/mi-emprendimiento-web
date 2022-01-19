@@ -7,7 +7,7 @@
     padding-left: 3rem;
     padding-right: 3rem;
     color: $white;
-    position: relative;
+    position: sticky;
 
     &__brand>svg {
         max-height: 7vh;
