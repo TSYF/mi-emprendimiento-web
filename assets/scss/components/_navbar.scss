@@ -1,5 +1,111 @@
 /* Navbar */
 
 .navbar {
+    background: $sable;
+    height: 10vh;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: $white;
+    position: relative;
+
+    &__brand>svg {
+        max-height: 7vh;
+        width: auto;
+    }
+
+    .collapsible {
+        text-align: right;
+
+        label {
+            cursor: pointer;
+            font-size: 5vh;
+            transition: .3s;
+            
+            &:hover {
+                color: $tangerine;
+            }
+        }
+        
+        input#menu {
+            display: none;
+        }
+    }
+
+
+    #menu:checked ~ &__container {
+        max-height: fit-content;
+        padding: 1em;
+
+
+        border-bottom-left-radius: .5em;
+        border-bottom-right-radius: .5em;
+    }
     
+    &__container {
+        position: absolute;
+        overflow: hidden;
+        width: fit-content;
+
+        right: 5vw;
+
+        max-height: 0;
+        padding: 0;
+
+        background-color: $sable;
+        
+        font-family: $poppins;
+        font-weight: $bold;
+        
+        transition: .5s;
+    }
+
+    &__list {
+        list-style-type: none;
+        width: fit-content;
+    }
+
+    &__item {
+        margin: auto;
+        width: fit-content;
+        
+        a {
+            transition: .5s;
+
+            &:hover {
+                color: $tangerine;
+            }
+        }
+    }
+
+}
+
+@include mQueryMin(sm) {
+    .navbar {
+        .collapsible {
+            label {
+                display: none;
+            }
+        }
+
+        &__container {
+            min-height: fit-content;
+            overflow: visible;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+        }
+
+        &__list {
+            display: flex;
+        }
+
+        &__item {
+            width: inherit;
+            a {
+                padding: 0 1em;
+            }
+        }
+    }
 }

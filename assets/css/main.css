@@ -582,6 +582,11 @@ template {
   display: none;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -1010,6 +1015,87 @@ template {
 }
 
 /* Navbar */
+.navbar {
+  background: #060606;
+  height: 10vh;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  color: #FFFFFF;
+  position: relative;
+}
+.navbar__brand > svg {
+  max-height: 7vh;
+  width: auto;
+}
+.navbar .collapsible {
+  text-align: right;
+}
+.navbar .collapsible label {
+  cursor: pointer;
+  font-size: 5vh;
+  transition: 0.3s;
+}
+.navbar .collapsible label:hover {
+  color: #FFAF6D;
+}
+.navbar .collapsible input#menu {
+  display: none;
+}
+#menu:checked ~ .navbar__container {
+  max-height: fit-content;
+  padding: 1em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+.navbar__container {
+  position: absolute;
+  overflow: hidden;
+  width: fit-content;
+  right: 5vw;
+  max-height: 0;
+  padding: 0;
+  background-color: #060606;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.navbar__list {
+  list-style-type: none;
+  width: fit-content;
+}
+.navbar__item {
+  margin: auto;
+  width: fit-content;
+}
+.navbar__item a {
+  transition: 0.5s;
+}
+.navbar__item a:hover {
+  color: #FFAF6D;
+}
+
+@media (min-width: 576px) {
+  .navbar .collapsible label {
+    display: none;
+  }
+  .navbar__container {
+    min-height: fit-content;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .navbar__list {
+    display: flex;
+  }
+  .navbar__item {
+    width: inherit;
+  }
+  .navbar__item a {
+    padding: 0 1em;
+  }
+}
 /* Buttons */
 .button {
   padding: 0.2em 0;
