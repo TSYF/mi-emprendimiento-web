@@ -1,0 +1,16 @@
+/* Main Section */
+
+.main {
+    padding: 1rem;
+    gap: 1rem;
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: inherit;
+        &.card {
+            border: 2px solid $black;
+        }
+    }
+
+}
