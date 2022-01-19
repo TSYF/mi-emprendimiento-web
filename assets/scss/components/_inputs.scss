@@ -1,0 +1,10 @@
+/* Inputs */
+
+.input {
+
+    border: 1px inset $white;
+    &:focus {
+        border-color: $tangerine;
+        background-color: $tangerine;
+    }
+}

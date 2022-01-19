@@ -1,0 +1,17 @@
+// Breakpoint Mixins
+
+@mixin mQueryMax($size) {
+    @media (max-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+@mixin mQueryMin($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+@mixin mQueryMinMax($size1, $size2) {
+    @media (width: minmax(map-get($breakpoints, $size1), map-get($breakpoints, $size2))) {
+        @content;
+    }
+}
